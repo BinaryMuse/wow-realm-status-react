@@ -21,8 +21,8 @@ module.exports = React.createClass({
 
   componentDidMount: function() {
     window.onpopstate = function(event) {
-      var filter = event.state && event.state.filter;
-      this.updateSearch(filter || '', true);
+      if (event.state && event.state.filter)
+        this.updateSearch(event.state.filter || '', true);
     }.bind(this);
   },
 
