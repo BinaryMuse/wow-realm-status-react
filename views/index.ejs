@@ -1,0 +1,19 @@
+<html>
+<head>
+  <title>WoW Realm Status</title>
+  <link rel="stylesheet" type="text/css" href="/assets/css/app.css" />
+  <script>
+  window.React = true;
+  window.props = <%- JSON.stringify(props) %>;
+  </script>
+</head>
+<body ng-app='wowRealmStatus'>
+  <a href='https://github.com/BinaryMuse/wow-realm-status-react'>
+    <img id='forkme' src='/assets/images/forkme.png'>
+  </a>
+
+  <div id='main'><%- app %></div>
+
+  <script type='text/javascript' src='/assets/js/bundle.js'></script>
+</body>
+</html>

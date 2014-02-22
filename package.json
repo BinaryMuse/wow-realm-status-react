@@ -1,0 +1,29 @@
+{
+  "name": "wow-realm-status-react",
+  "version": "0.0.0",
+  "description": "WoW Realm Status Page: React Edition",
+  "scripts": {
+    "start": "node server.js",
+    "build": "webpack -p --module-bind jsx client.js public/assets/js/bundle.js",
+    "watch": "webpack -p -w --cache --module-bind jsx client.js public/assets/js/bundle.js"
+  },
+  "keywords": [
+    "wow",
+    "warcraft",
+    "react"
+  ],
+  "author": "Brandon Tilley <brandon@brandontilley.com>",
+  "license": "MIT",
+  "dependencies": {
+    "envify": "~1.2.1",
+    "react": "~0.9.0",
+    "express": "~3.4.8",
+    "node-jsx": "~0.9.0",
+    "ejs": "~0.8.5",
+    "jsonget": "~0.2.2"
+  },
+  "devDependencies": {
+    "webpack": "~1.0.0",
+    "jsx-loader": "~0.9.0"
+  }
+}
