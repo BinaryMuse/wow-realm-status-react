@@ -1,6 +1,7 @@
 /** @jsx React.DOM */
 
 var React = require('react');
+var moment = require('moment');
 
 module.exports = React.createClass({
   displayName: 'LastUpdateBox',
@@ -18,6 +19,6 @@ module.exports = React.createClass({
   },
 
   formatDate: function(date) {
-    return date ? 'sometime!' : 'never'
+    return date ? moment(date).format("MMM d, h:mm A") : 'never';
   }
 });

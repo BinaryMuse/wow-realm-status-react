@@ -6,6 +6,7 @@ var SearchBox = require('./search_box.jsx');
 var LastUpdateBox = require('./last_update_box.jsx');
 var ResetSearchBox = require('./reset_search_box.jsx');
 var RealmList = require('./realm_list.jsx');
+var realmFetcher = require('../realm_fetcher');
 
 module.exports = React.createClass({
   displayName: 'Page',
@@ -24,6 +25,13 @@ module.exports = React.createClass({
       if (event.state && event.state.filter)
         this.updateSearch(event.state.filter || '', true);
     }.bind(this);
+
+    setInterval(function() {
+      this.setState({loading: true});
+      realmFetcher.client(function(data) {
+        this.setState({realms: data, lastUpdate: new Date(), loading: false});
+      }.bind(this));
+    }.bind(this), 5 * 60 * 1000);
   },
 
   render: function() {

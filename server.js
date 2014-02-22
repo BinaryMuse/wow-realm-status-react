@@ -15,7 +15,7 @@ app.use(express.favicon());
 app.use(express.static(path.join(__dirname, '/public')));
 
 app.get(/^\/(?!assets\/).*$/, function(req, res) {
-  realmFetcher(function(err, data) {
+  realmFetcher.server(function(err, data) {
     if (err) return res.json({error: err});
 
     var filter = req.path.substr(1);

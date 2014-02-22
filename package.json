@@ -20,7 +20,8 @@
     "express": "~3.4.8",
     "node-jsx": "~0.9.0",
     "ejs": "~0.8.5",
-    "jsonget": "~0.2.2"
+    "superagent": "~0.16.0",
+    "moment": "~2.5.1"
   },
   "devDependencies": {
     "webpack": "~1.0.0",
