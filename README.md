@@ -19,3 +19,11 @@ With Node.js installed:
 You may specify a port to bind to by specifying a `PORT` environment variable, e.g. `PORT=8765 npm start`.
 
 You may watch the application for changes and continuously rebuild the client bundle by running `npm run watch` instead of `npm run build`.
+
+Versions of This Application
+----------------------------
+
+* Ruby - [source](https://github.com/BinaryMuse/wow-realm-status), [demo](http://wowstatus.info/)
+* Backbone - [source](https://github.com/BinaryMuse/wow-realm-status-js), [demo](http://binarymuse.github.io/wow-realm-status-js/)
+* AngularJS - [source](https://github.com/BinaryMuse/wow-realm-status-angular), [demo](http://binarymuse.github.io/wow-realm-status-angular/)
+* React - [source](https://github.com/BinaryMuse/wow-realm-status-react), [demo](http://wow-realm-status-react.herokuapp.com/)
